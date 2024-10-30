@@ -1,0 +1,9 @@
+"/": display all the files in the directory
+When we click on a particular date:
+    12-08-2024: then the route should be /12/08/2024
+    and the page should display all the content in that file
+    We can use fs.readFile(filename, "utf-8", callback()) to read the file
+
+We can create new files using the form on "/"
+We can edit a khata file using the form on "/edit"
+We can also delete a khata file using the form on "/delete"

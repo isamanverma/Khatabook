@@ -1,0 +1,25 @@
+<div style="display: flex; flex-direction: column; justify-content: center; width: 800px;">
+    <h2 style="color: #333;">Expenses</h2>
+    <% if (files.length> 0) { %>
+        <% files.forEach(file=> { %>
+            <div
+                style="border: 1px solid #ccc; border-radius: 8px; padding: 15px; background-color: white; margin-bottom: 15px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <a href="/view/<%= file %>" style="text-decoration: none; color: #333;">
+                        <p style="margin: 0; font-family: Arial, sans-serif; color: #333;">
+                            <%= file %>
+                        </p>
+                    </a>
+                    <div>
+                        <a href="/edit/<%= file %>"
+                            style="text-decoration: none; color: white; background-color: #3E42FA; padding: 5px 10px; border-radius: 5px; transition: background-color 0.3s ease;">Edit</a>
+                        <a href="/delete/<%= file %>"
+                            style="text-decoration: none; color: white; background-color: #3E42FA; padding: 5px 10px; border-radius: 5px; transition: background-color 0.3s ease;">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+                <% } else { %>
+                    <p>No expenses found.</p>
+                    <% } %>
+</div>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khatabook</title>
+</head>
+
+<body
+    style="background-color: #EBF5D5;font-family: Arial, sans-serif; height: 100vh; display: flex; flex-direction: column; align-items: left; justify-content: space-between;">
+    <div>
+
+        <%- include('./partials/header.ejs') %>
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="text-align: center;">Khatabook - Expense Tracker</h1>
+                <%- include('./partials/form.ejs')%>
+                    <%- include('./partials/expenses.ejs')%>
+            </div>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
